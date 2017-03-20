@@ -13,6 +13,7 @@
 		6C87692E1E7F679E00B0C85A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C87692C1E7F679E00B0C85A /* Main.storyboard */; };
 		6C8769301E7F679E00B0C85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C87692F1E7F679E00B0C85A /* Assets.xcassets */; };
 		6C8769331E7F679E00B0C85A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8769311E7F679E00B0C85A /* LaunchScreen.storyboard */; };
+		6C87693C1E7F67C000B0C85A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C87693B1E7F67C000B0C85A /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6C87692F1E7F679E00B0C85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8769321E7F679E00B0C85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8769341E7F679E00B0C85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C87693B1E7F67C000B0C85A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C87693C1E7F67C000B0C85A /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +45,10 @@
 		6C8769171E7F679E00B0C85A = {
 			isa = PBXGroup;
 			children = (
+				6C87693B1E7F67C000B0C85A /* SafariServices.framework */,
 				6C8769221E7F679E00B0C85A /* 3DTouch */,
 				6C8769211E7F679E00B0C85A /* Products */,
+				6C87693A1E7F67C000B0C85A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +82,13 @@
 				6C8769241E7F679E00B0C85A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C87693A1E7F67C000B0C85A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenen.-DTouch";
@@ -281,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenen.-DTouch";
@@ -307,6 +321,7 @@
 				6C8769391E7F679E00B0C85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

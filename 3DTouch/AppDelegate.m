@@ -17,7 +17,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //设置APP图标的3DTouch
+    [self set3DTouch];
+    
     return YES;
+}
+
+#pragma mark-------设置APP图标的3DTouch
+- (void)set3DTouch {
+    
+    //使用系统自带图标(Type代表图标类型)
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
+    /*也可以使用自己制作的图片
+    UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"自己的图片"];
+    */
+    
+    //添加标题和图片(这里示范两个标题)
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc] initWithType:@"item1" localizedTitle:@"标题1" localizedSubtitle:nil icon:icon1 userInfo:nil];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc] initWithType:@"item2" localizedTitle:@"标题2" localizedSubtitle:nil icon:icon2 userInfo:nil];
+    
+    //添加到数组
+    NSArray *array = @[item1,item2];
+    [UIApplication sharedApplication].shortcutItems = array;
+    
+}
+
+#pragma mark-----APP图标的3DTouch代理方法
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
+    //3DTouch实现界面跳转
+    if ([shortcutItem.type isEqualToString:@"item1"]) {
+        //跳转界面记得设置rootViewController
+        NSLog(@"按压了第一个标题");
+    }else if ([shortcutItem.type isEqualToString:@"item2"]) {
+        //跳转界面记得设置rootViewController
+        NSLog(@"按压了第二个标题");
+    }
+    
 }
 
 
